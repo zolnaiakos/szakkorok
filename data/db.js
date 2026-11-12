@@ -5,7 +5,8 @@ const dbConfig = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_DATABASE,
-    port: process.env.DB_PORT
+    port: process.env.DB_PORT,
+    dateStrings: true
 }
 
 const pool = mysql2.createPool(dbConfig)
