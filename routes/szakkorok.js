@@ -53,7 +53,7 @@ router.get('/:id', async(req,res)=>{
     const [eredmeny] = await pool.query(sql1, [id])
 
     if (eredmeny.length === 0) {
-        return res.status(404).json({ uzenet: 'Szakkör nem található!' });
+        return res.status(404).json({ error: 'Szakkör nem található!' });
     }
 
     const szakkor = {
